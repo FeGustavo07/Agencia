@@ -1,0 +1,54 @@
+﻿@model Agencia.Models.Contato
+
+
+@{
+    ViewData["Title"] = "Contato";
+}
+
+
+<link rel="stylesheet" href="~/css/contato.css" />
+
+
+
+<div class="contato-body">
+                <h1 class="title">Contato</h1>
+  
+                <form aps-action="Contato" method="post">
+                    <div class="input-area">
+                        <input type="text" placeholder="Digite seu nome..." class="format-input" asp-for="Nome">
+                        <input type="email" placeholder="Digite seu email..." class="format-input"  asp-for="Email"> 
+                    </div>
+                    <textarea cols="30" rows="10" placeholder="Digite aqui sua sugestão ou reclamação..."  asp-for="Mensagem"></textarea>
+                    <input type="submit" value="Enviar" class="btn-style">
+                </form>
+ </div>
+<footer>
+    <section id="top">
+        <p>Telefone - (11) 2351-9990</p>
+        <p>Email - dreamtrip@gmail.com</p>
+        <p>Endereço - Av Paulista, n°1000 São Paulo SP</p> 
+    </section>
+    <section id="bottom">
+        <article class="info-footer">
+            <h6>Minha Conta</h6>
+            <p>Meu perfil</p>
+            <p>minhas passagens</p>
+        </article>
+        <article class="info-footer">
+            <h6>Sobre Nós</h6>
+            <p>Missão</p>
+            <p>Visão</p>
+            <p>Valores</p>
+        </article>
+        <article class="info-footer">
+            <h6>Segurança</h6>
+            <p>Termos e condições</p>
+            <p>Politica de privacidade</p>
+        </article>
+        <div class="social-media">
+            <a href="#"><img src="../imagens/facebook.png" alt=""></a>
+            <a href="#"> <img src="../imagens/instagram.png" alt=""></a>
+            <a href="#"> <img src="../imagens/whatsapp.png" alt=""></a>
+        </div>
+    </section>
+</footer>

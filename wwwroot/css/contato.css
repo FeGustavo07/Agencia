@@ -1,0 +1,48 @@
+﻿
+.contato-body {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+}
+
+div.input-area {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 8%;
+}
+
+input.format-input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 45%;
+    height: 80%;
+    font: normal 1em Arial;
+}
+
+input[type="submit"] {
+    margin-top: 5%;
+    width: 25%;
+    height: 10%;
+    font: bold 1em Arial;
+    border-radius: 10px;
+}
+
+textarea {
+    margin-top: 5%;
+    width: 100%;
+}

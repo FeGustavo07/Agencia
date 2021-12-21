@@ -1,0 +1,33 @@
+﻿@model Agencia.Models.Clientes
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+ <link rel="stylesheet" href="~/css/index.css" />
+
+
+<section class="section-index-body">
+    <article class="login-article">
+        <form aps-action="Index" method="post" class="login-form">
+            <fieldset>
+                <legend>Login</legend>
+                <placeholder>
+                    <img src="../imagens/email.png" alt="">
+                 <input type="email" placeholder="Digite seu email..." asp-for="Email" required/> <br>
+                </placeholder>
+                <placeholder>
+                    <img src="../imagens/lock.png" alt="">
+                    <input type="password" placeholder="Digite sua senha..." asp-for="Senha" required/> <br>
+                </placeholder>
+            </fieldset>
+            <button type="submit" class="btn-style">Entrar</button>
+            <a id="link-cadastro" asp-area="" asp-controller="Home" asp-action="Cadastro">Ainda não possui uma conta ? Clique aqui!</a>
+        </form>
+    </article>
+    <article class="banner-article">
+        <img src="../imagens/travelers_re_y25a.svg" alt="" id="banner">
+        <h1>Bem vindo a Dream Trip...</h1>
+        <h2>Aqui seu sonho é realizado!</h2>
+    </article>
+</section>

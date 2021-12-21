@@ -1,0 +1,74 @@
+﻿@model Agencia.Models.Clientes
+
+@{
+    ViewData["Title"] = "Cadastro";
+} 
+
+<link rel="stylesheet" href="~/css/cadastro.css" />
+
+ <h1 class="title">Criar Conta</h1>
+    <form aps-action="Cadastro" method="post">
+        <fieldset id="dados-pessoais">
+            <legend>Dados pessoais</legend>
+
+            <label>
+                Nome
+                <input type="text" required asp-for="Nome"/>
+            </label>
+
+            <label>
+                Data de Nascimento
+                <input type="date" required asp-for="DataNascimento">
+            </label>
+
+         <label>
+             CPF
+             <input type="text" required asp-for="CPF"/>
+         </label>
+
+            <label>
+                Telefone p/ contato
+                <input type="tel" asp-for="Telefone"/>
+            </label>
+            
+        </fieldset>
+        <fieldset id="endereco">
+            <legend>Endereço</legend>
+
+            <label>
+                Logradouro
+                <input type="text" required asp-for="Endereco"/>
+            </label>
+
+            <label>
+                Número
+                <input type="number" required asp-for="Numero"/>
+            </label>
+
+
+            <label>
+                Cidade
+                <input type="text"  required asp-for="Cidade"/>
+            </label>
+
+             <label>
+                Estado
+                <input type="text"  required asp-for="Estado"/>
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Cadastro</legend>
+            <label>
+                Email
+                <input type="email" required asp-for="Email"/>
+            </label>
+            <label>
+                Senha
+                <input type="password" required asp-for="Senha"/>
+            </label>
+        </fieldset>
+        <input type="submit" value="Cadastrar" class="btn-style">
+    </form>
+ <a class="nav-link" id="voltar" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>

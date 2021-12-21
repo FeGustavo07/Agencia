@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+<body class="grid-body">
+    <header class="header-grid">
+        <nav class="navbar nav-style navbar-expand-sm navbar-toggleable-sm navbar-light bg-#7b2cbf; border-bottom box-shadow mb-3">
+             <p class="navbar-brand" id="logo">Dream Trip</p>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link link-style" asp-area="" asp-controller="Home" asp-action="Index"><b style="color: white">Home</b></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link link-style" asp-area="" asp-controller="Home" asp-action="Destinos"><b style="color: white">Detinos</b></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link link-style" asp-area="" asp-controller="Home" asp-action="Promocoes"><b style="color: white">Promoções</b></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link link-style" asp-area="" asp-controller="Home" asp-action="Contato"><b style="color: white">Contato</b></a>
+                        </li>
+                    </ul>
+              </div>
+               <div class="carrinho-logo">
+                    <button id="carrinho-btn"><img src="../imagens/shopping-cart24px.png" alt=""></button>
+               </div> 
+        </nav>
+    </header>
+
+    <div class="container-grid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+  
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
+
